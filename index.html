@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushil Thakur | Ethical Hacker & Full-Stack Developer</title>
+    <meta name="description"
+        content="Certified Ethical Hacker (CEH) portfolio showcasing cybersecurity expertise and full-stack development skills">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Authentication Popup Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-overlay"></div>
+        <div class="auth-modal-content">
+            <div class="terminal-window">
+                <!-- Terminal Header -->
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button red"></div>
+                        <div class="terminal-button yellow"></div>
+                        <div class="terminal-button green"></div>
+                    </div>
+                    <span class="terminal-title">WELCOME TO MY PORTFOLIO</span>
+                </div>
+
+                <!-- Terminal Content -->
+                <div class="terminal-content">
+                    <div id="terminal-text" class="terminal-text"></div>
+
+                    <div id="auth-form" class="auth-form" style="display: none;">
+                        <div class="command-line">
+                            $ <span class="command-text">access_portfolio</span>
+                        </div>
+                        <button id="visit-button" class="visit-button">
+                            <span class="button-text">Visit Portfolio</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Message -->
+            <div class="terminal-footer">
+                <div>✨ EXPLORE MY WORK & SKILLS ✨</div>
+                <div class="footer-subtext">Ethical Hacking • Full-Stack Development • Cybersecurity</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Content -->
+    <div id="portfolio" class="portfolio-container">
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">&lt;/&gt; SUSHIL</h1>
+                <p class="tagline">Ethical Hacker & Dev 🔥</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="about">
+                    <span class="nav-icon">&gt; </span>ABOUT
+                </button>
+                <button class="nav-item" data-section="skills">
+                    <span class="nav-icon">&gt; </span>SKILLS
+                </button>
+                <button class="nav-item" data-section="projects">
+                    <span class="nav-icon">&gt; </span>PROJECTS
+                </button>
+                <button class="nav-item" data-section="certs">
+                    <span class="nav-icon">&gt; </span>CERTIFICATES
+                </button>
+                <button class="nav-item" data-section="contact">
+                    <span class="nav-icon">&gt; </span>CONTACT
+                </button>
+            </nav>
+
+            <!-- Social Links -->
+            <div class="sidebar-social">
+                <p class="social-label">FOLLOW</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sushil-thakur-b1b482271" target="_blank"
+                        rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/sushiiilthakur/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1aMYdBSPAi/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section id="about-section" class="content-section active">
+                <div class="section-header">
+                    <h2 class="section-title">&gt; ABOUT_ME</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="profile-image-container">
+                    <div class="profile-glow"></div>
+                    <div class="profile-border"></div>
+                    <img src="pf.png" alt="Sushil Thakur" class="profile-image" onerror="this.style.display='none'">
+                </div>
+
+                <div class="about-content">
+                    <p class="about-text">
+                        I am <span class="highlight-primary">Sushil Thakur</span>, a dedicated and
+                        solution-oriented software developer with a strong academic background in Computer Applications.
+                        My
+                        expertise spans full-stack development, data structures, and cybersecurity, with a particular
+                        focus on
+                        ethical hacking practices and secure application development.
+                    </p>
+
+                    <p class="about-text">
+                        I am passionate about building <span class="highlight-accent">secure</span>,
+                        <span class="highlight-accent">efficient</span>, and
+                        <span class="highlight-accent">user-centric</span> digital solutions using modern technologies
+                        such as Java, Python, HTML, CSS, JavaScript, React, and Next.js. My experience includes building
+                        robust
+                        backend systems, responsive frontend applications, and implementing security best practices
+                        across the
+                        development lifecycle.
+                    </p>
+
+                    <p class="about-text">
+                        As a Certified Ethical Hacker, I combine my deep knowledge of network security, penetration
+                        testing, and
+                        vulnerability assessment with practical development experience. I believe in secure-by-design
+                        principles
+                        and continuously work to stay updated with the latest security trends and best practices in the
+                        industry.
+                    </p>
+                </div>
+
+                <!-- Skills Section (Embedded in About) -->
+                <div class="skills-divider">
+                    <div class="section-header">
+                        <h2 class="section-title">&gt; SKILLS</h2>
+                        <div class="title-underline"></div>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <h3 class="skill-title">Cybersecurity</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="bullet">&gt;</span> Penetration Testing</li>
+                                <li><span class="bullet">&gt;</span> Network Security</li>
+                                <li><span class="bullet">&gt;</span> Vulnerability Assessment</li>
+                                <li><span class="bullet">&gt;</span> Ethical Hacking</li>
+                                <li><span class="bullet">&gt;</span> Security Auditing</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                <h3 class="skill-title">Backend Development</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="bullet">&gt;</span> Java</li>
+                                <li><span class="bullet">&gt;</span> Python</li>
+                                <li><span class="bullet">&gt;</span> Node.js</li>
+                                <li><span class="bullet">&gt;</span> Express.js</li>
+                                <li><span class="bullet">&gt;</span> Database Design</li>
+                                <li><span class="bullet">&gt;</span> API Development</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <h3 class="skill-title">Frontend Development</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="bullet">&gt;</span> React</li>
+                                <li><span class="bullet">&gt;</span> Next.js</li>
+                                <li><span class="bullet">&gt;</span> JavaScript</li>
+                                <li><span class="bullet">&gt;</span> HTML/CSS</li>
+                                <li><span class="bullet">&gt;</span> Tailwind CSS</li>
+                                <li><span class="bullet">&gt;</span> Responsive Design</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <h3 class="skill-title">Tools & Technologies</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="bullet">&gt;</span> Git</li>
+                                <li><span class="bullet">&gt;</span> GitHub</li>
+                                <li><span class="bullet">&gt;</span> Linux</li>
+                                <li><span class="bullet">&gt;</span> Docker</li>
+                                <li><span class="bullet">&gt;</span> Kali Linux</li>
+                                <li><span class="bullet">&gt;</span> Metasploit</li>
+                                <li><span class="bullet">&gt;</span> Wireshark</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">&gt; SKILLS</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <h3 class="skill-title">Cybersecurity</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="bullet">&gt;</span> Penetration Testing</li>
+                            <li><span class="bullet">&gt;</span> Network Security</li>
+                            <li><span class="bullet">&gt;</span> Vulnerability Assessment</li>
+                            <li><span class="bullet">&gt;</span> Ethical Hacking</li>
+                            <li><span class="bullet">&gt;</span> Security Auditing</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="skill-title">Backend Development</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="bullet">&gt;</span> Java</li>
+                            <li><span class="bullet">&gt;</span> Python</li>
+                            <li><span class="bullet">&gt;</span> Node.js</li>
+                            <li><span class="bullet">&gt;</span> Express.js</li>
+                            <li><span class="bullet">&gt;</span> Database Design</li>
+                            <li><span class="bullet">&gt;</span> API Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            <h3 class="skill-title">Frontend Development</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="bullet">&gt;</span> React</li>
+                            <li><span class="bullet">&gt;</span> Next.js</li>
+                            <li><span class="bullet">&gt;</span> JavaScript</li>
+                            <li><span class="bullet">&gt;</span> HTML/CSS</li>
+                            <li><span class="bullet">&gt;</span> Tailwind CSS</li>
+                            <li><span class="bullet">&gt;</span> Responsive Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <svg class="skill-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            <h3 class="skill-title">Tools & Technologies</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="bullet">&gt;</span> Git</li>
+                            <li><span class="bullet">&gt;</span> GitHub</li>
+                            <li><span class="bullet">&gt;</span> Linux</li>
+                            <li><span class="bullet">&gt;</span> Docker</li>
+                            <li><span class="bullet">&gt;</span> Kali Linux</li>
+                            <li><span class="bullet">&gt;</span> Metasploit</li>
+                            <li><span class="bullet">&gt;</span> Wireshark</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">&gt; PROJECTS</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-list">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">QR Code Generator</h3>
+                                <p class="project-desc">Dynamic QR code generation tool with customization options</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Virtual Chatbot</h3>
+                                <p class="project-desc">AI-powered conversational interface with natural language
+                                    processing</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">NLP</span>
+                                    <span class="tag">ML</span>
+                                </div>
+                            </div>
+                            <span class="project-status active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Virtual Assistant</h3>
+                                <p class="project-desc">Intelligent voice-based assistant with command recognition</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Speech Recognition</span>
+                                </div>
+                            </div>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Tourist Guide Website</h3>
+                                <p class="project-desc">Interactive tourism platform with real-time recommendations</p>
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">MongoDB</span>
+                                </div>
+                            </div>
+                            <span class="project-status active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">SushilOS</h3>
+                                <p class="project-desc">Browser-based operating system simulation with terminal
+                                    interface</p>
+                                <div class="project-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">HTML/CSS</span>
+                                </div>
+                            </div>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Image & QR Code Bot</h3>
+                                <p class="project-desc">Telegram/WhatsApp bot for image processing and QR code
+                                    generation</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Bot API</span>
+                                </div>
+                            </div>
+                            <span class="project-status active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Student Admission System</h3>
+                                <p class="project-desc">Full-stack application for student enrollment and management</p>
+                                <div class="project-tags">
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">Bootstrap</span>
+                                </div>
+                            </div>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-info">
+                                <h3 class="project-name">Resume Builder</h3>
+                                <p class="project-desc">JavaScript-powered resume creation and export tool</p>
+                                <div class="project-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">PDF Export</span>
+                                </div>
+                            </div>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificates Section -->
+            <section id="certs-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">&gt; CERTIFICATES</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="certs-list">
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">Certified Ethical Hacker (CEH) 🔥</h3>
+                            <p class="cert-issuer">🏢 EC-Council</p>
+                            <p class="cert-validity">⏱️ 3 Years</p>
+                            <p class="cert-desc">Globally recognized certification in cybersecurity and ethical hacking.
+                                Covers network security, scanning, enumeration, and advanced penetration testing
+                                techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">🛡️ Cybersecurity Certification</h3>
+                            <p class="cert-issuer">🏢 Tech Mahindra | Skill India Digital Hub</p>
+                            <p class="cert-validity">⏱️ 10 Hours</p>
+                            <p class="cert-desc">Completed: Feb 2, 2025. Intensive course covering security fundamentals
+                                and best practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">🚁 Drone Developer Certification</h3>
+                            <p class="cert-issuer">🏢 RF Skilling Academy</p>
+                            <p class="cert-validity">⏱️ RFSA00083501</p>
+                            <p class="cert-desc">Advanced drone development skills and autonomous systems programming.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">🧠 Cybersecurity Analyst Virtual Experience</h3>
+                            <p class="cert-issuer">🏢 TATA</p>
+                            <p class="cert-validity">⏱️ Completed</p>
+                            <p class="cert-desc">IAM strategy, platform integration, custom solutions, and enterprise
+                                security implementations.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">📦 Red Bull Sales Virtual Experience</h3>
+                            <p class="cert-issuer">🏢 Red Bull</p>
+                            <p class="cert-validity">⏱️ Completed</p>
+                            <p class="cert-desc">Client analysis, market research, and high-impact presentation skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">🖥️ Software Engineering Training</h3>
+                            <p class="cert-issuer">🏢 Industry Training</p>
+                            <p class="cert-validity">⏱️ Completed</p>
+                            <p class="cert-desc">GitHub workflows, AI tools integration, cloud infrastructure, and agile
+                                sprint retrospectives.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">📊 Data Visualization</h3>
+                            <p class="cert-issuer">🏢 Project Module</p>
+                            <p class="cert-validity">⏱️ Completed</p>
+                            <p class="cert-desc">Business insights extraction and advanced data communication
+                                techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <div class="cert-content">
+                            <h3 class="cert-name">🔐 Cybersecurity Phishing Design</h3>
+                            <p class="cert-issuer">🏢 Skill Development</p>
+                            <p class="cert-validity">⏱️ Completed</p>
+                            <p class="cert-desc">Phishing simulation, social engineering awareness, and security
+                                training development.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-section" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">&gt; CONTACT</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <h3 class="contact-title">Email</h3>
+                        </div>
+                        <a href="mailto:sushilthakur0408@gmail.com" class="contact-link">sushilthakur0408@gmail.com</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <h3 class="contact-title">Phone</h3>
+                        </div>
+                        <a href="tel:+919175911291" class="contact-link">+91 9175-911-291</a>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="social-media-section">
+                    <h3 class="social-media-title">SOCIAL_MEDIA_LINKS</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/sushiiilthakur/" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg class="social-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <div class="social-link-info">
+                                <p class="social-link-name">Instagram</p>
+                                <p class="social-link-handle">@sushiiilthakur</p>
+                            </div>
+                            <svg class="external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                        <a href="https://in.linkedin.com/in/sushil-thakur-b1b482271" target="_blank"
+                            rel="noopener noreferrer" class="social-link">
+                            <svg class="social-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <div class="social-link-info">
+                                <p class="social-link-name">LinkedIn</p>
+                                <p class="social-link-handle">Sushil Thakur</p>
+                            </div>
+                            <svg class="external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.facebook.com/share/1aMYdBSPAi/" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg class="social-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            <div class="social-link-info">
+                                <p class="social-link-name">Facebook</p>
+                                <p class="social-link-handle">Sushil Thakur</p>
+                            </div>
+                            <svg class="external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                        <a href="https://t.me/sushiiilthakur" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg class="social-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <div class="social-link-info">
+                                <p class="social-link-name">Telegram</p>
+                                <p class="social-link-handle">@sushiiilthakur</p>
+                            </div>
+                            <svg class="external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="portfolio-footer">
+                    <p class="footer-copyright">© 2025 Sushil Thakur. All rights reserved.</p>
+                    <p class="footer-tagline">Ethical Hacker | Full-Stack Developer | Cybersecurity Expert</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <button class="mobile-nav-item active" data-section="about">About</button>
+            <button class="mobile-nav-item" data-section="skills">Skills</button>
+            <button class="mobile-nav-item" data-section="projects">Projects</button>
+            <button class="mobile-nav-item" data-section="certs">Certs</button>
+            <button class="mobile-nav-item" data-section="contact">Contact</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
